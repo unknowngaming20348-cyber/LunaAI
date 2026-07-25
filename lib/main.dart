@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const LunaAI());
@@ -12,17 +13,10 @@ class LunaAI extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Luna AI',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Luna AI'),
-        ),
-        body: const Center(
-          child: Text(
-            'Welcome to Luna AI 🚀',
-            style: TextStyle(fontSize: 24),
-          ),
-        ),
+      theme: ThemeData(
+        useMaterial3: true,
       ),
+      home: const HomeScreen(),
     );
   }
 }
